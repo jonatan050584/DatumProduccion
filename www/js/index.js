@@ -17,7 +17,7 @@
  * under the License.
  */
 
-var gaPlugin;
+
 
 var app = {
     // Application Constructor

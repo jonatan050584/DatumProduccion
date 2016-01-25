@@ -1,5 +1,5 @@
 var path = "";
-
+var gaPlugin;
 var header;
 var home;
 var menu;
