@@ -23,8 +23,14 @@ function ruta(str){
 }
 document.addEventListener('deviceready', function(){
 	alert("ready");
+	window.analytics.startTrackerWithId('UA-72808177-1', success, fail);
 }, false);
-
+function success(){
+	alert("ok");
+}
+function fail(msg){
+	alert(msg);
+}
 $(document).ready(function(){
 
 
