@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Datum</title>
+	
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="assets/webfont/stylesheet.css">
+	<link rel="stylesheet" href="assets/estilo.css">
+	<link rel="stylesheet" href="assets/chart.css">
+	<script type="text/javascript" src="cordova.js"></script>
+	<script src="assets/js/jquery.js"></script>
+	<script src="assets/js/jquery.mobile.custom.min.js"></script>
+	<script src="assets/js/jquery.csv-0.71.min.js"></script>
+	<script src="assets/js/header.js"></script>
+	<script src="assets/js/main.js"></script>
+	<script src="assets/js/home.js"></script>
+	<script src="assets/js/menu.js"></script>
+	<script src="assets/js/contacto.js"></script>
+	<script src="assets/js/datum.js"></script>
+	<script src="assets/js/categoria.js?rad=2"></script>
+	<script src="assets/js/sondeo.js"></script>
+	<script src="assets/js/resumen.js"></script>
+	<script src="assets/js/informe.js"></script>
+	<script src="assets/js/graphs/pie.js"></script>
+	<script src="assets/js/graphs/line.js"></script>
+	<script src="assets/js/graphs/bar.js"></script>
+	<script src="assets/js/graphs/column.js"></script>
+	<script src="assets/js/graphs/barsolo.js"></script>
+	<script src="assets/js/graphs/columnstacked.js"></script>
+	<script src="assets/highcharts/highstock.js"></script>
+    <script src="assets/highcharts/data.js"></script>
+    <script src="assets/highcharts/exporting.js"></script>
+	<script src="assets/js/canvg/rgbcolor.js"></script>
+	<script src="assets/js/canvg/StackBlur.js"></script>
+	<script src="assets/js/canvg/canvg.js"></script>
+	<script src="assets/js/watermark.min.js"></script>
+</head>
+<body>
+<div id="nav">
+	<div class="back"></div>
+	<div class="actions">
+		<div class="line"></div>
+		<div class="line"></div>
+		<div class="line"></div>
+	</div>
+	<div class="titulo"></div>
+	
+</div>
+<div id="menusondeo">
+	<div class="item share"><div class="texto">Compartir</div></div>
+	<div class="item resumen"><div class="texto">Ver resumen de ficha técnica</div></div>
+	<div class="item descarga"><div class="texto">Descargar informe completo</div></div>
+</div>
+<div id="cubre"></div>
+<div style="height:50px"></div>
+<div class="seccion" id="home">
+	<img src="assets/images/iso.png" width="30" alt="" class="iso">
+	<div class="area">
+		<div class="cont">
+			<img src="assets/images/logo.png" height="55" width="174" alt="" class="logo">
+			<div class="texto">
+				
+			</div>
+			<div class="btempezar">EMPEZAR</div>
+			
+
+		</div>
+	</div>
+</div>
+<div class="seccion" id="menu">
+	
+	<div class="item cat ficha">
+		<div class="bt">
+			<div class="con">
+				<div class="ico" style="background-image:url(files/iconos/b6.png)"></div>
+				<div class="nom"><div class="txt">FICHA<BR>TÉCNICA</div></div>
+			</div>
+			
+		</div>
+	</div>
+	
+	<div class="item bottom contacto">
+		<div class="bt">CONTACTO</div>
+	</div>
+	<div class="item bottom datum">
+		<div class="bt">DATUM</div>
+	</div>
+	<div class="clear"></div>
+</div>
+<div class="seccion" id="categoria">
+	<div class="banner">
+		<div class="area">
+			<div class="nombre"></div>
+		</div>
+	</div>
+	<div class="lista">
+		<!--<div class="item"><div class="txt">Lorem ipsum dolor sit amet</div></div>-->
+		
+	</div>
+</div>
+<div class="seccion" id="sondeo">
+	<h1 class="titulo"></h1>
+	<div class="subtitulo"></div>
+
+	
+
+	<div class="graficos">
+		
+	</div>
+	<div class="leyenda">
+		
+		
+	</div>
+	<div class="info"></div>
+	<div class="sharegraph">
+		
+	</div>
+	<canvas id="canvas" width="400px" height="600px"></canvas> 
+</div>
+<div class="seccion" id="contacto">
+	<div class="banner"></div>
+	<div class="lista">
+		<div class="item dir">
+			<div class="texto">Av. Gral. Trinidad Morán 740. Lince,Lima - Perú</div>			
+		</div>
+		<div class="item tel">
+			<div class="texto">(511) 2150600</div>
+		</div>
+		<div class="item web">
+			<div class="texto">www.datum.com.pe</div>
+		</div>
+		<div class="item em">
+			<div class="texto">datum@datum.com.pe</div>
+		</div>
+	</div>
+</div>
+<div class="seccion" id="datum">
+	<div class="cont">
+		<img src="assets/images/logo.png" height="55" width="174" alt="" class="logo">
+		<br><p>DATUM INTERNACIONAL es una empresa de investigación de mercados y opinión pública. Con  35 años en el mercado, nos sentimos orgullosos de haber contribuido a la consolidación de los negocios y futuro de nuestros clientes, gracias al compromiso de  destacados profesionales y el respaldo de alianzas internacionales. </p>
+<p>Innovación permanente y altos estándares de calidad caracterizan el trabajo que realizamos. Contamos con moderna infraestructura, red de campo a nivel nacional y tecnología que se adapta a las necesidades particulares de cada estudio.</p>
+
+		
+	</div>
+</div>
+<div class="seccion" id="resumen">
+	<div class="cont">
+		<div class="carga">
+			
+		
+		 
+        </div>
+		<br>
+		
+          <div class="boton btcompleto">
+          	VER FICHA COMPLETA
+          </div>
+	</div>
+</div>
+
+
+
+
+<div class="seccion" id="informe">
+	<div class="cont">
+		<div class="carga">
+			
+			
+		
+		</div>
+		<br>
+		
+	</div>
+</div>
+
+<script type="text/javascript" src="cordova.js"></script>
+<script type="text/javascript" src="js/index.js"></script>
+<script type="text/javascript">
+    app.initialize();
+</script>
+</body>
+</html>

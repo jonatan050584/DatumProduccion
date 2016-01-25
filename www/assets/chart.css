@@ -1,0 +1,32 @@
+.chart h2.titulo{
+	color: #444444;
+	font-weight: normal;
+	font-family: 'HelveticaNeueBold';
+	font-size: 20px;
+	text-align: center;
+}
+.chart .subtitulo{
+	font-family: 'HelveticaNeueLight';
+	font-size: 14px;
+	line-height: 18px;
+	color: #545454;
+	text-align: justify;
+}
+.chart .legend{
+	font-family: 'HelveticaNeueLight';
+	font-size: 14px;
+	color: #545454;
+	line-height: 24px;
+	margin-top: -8px;
+
+}
+.chart.pie.label{
+	font-family: 'HelveticaNeueBold';
+	font-size: 12px;
+	font-weight: normal;
+}
+.chart.bar.label{
+	font-family: 'HelveticaNeueBold';
+	font-size: 20px;
+	font-weight: normal;
+}
