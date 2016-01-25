@@ -16,15 +16,15 @@ var pulsos;
 var seccion = "home";
 
 var produccion=false;
-
+var gaPlugin;
 
 function ruta(str){
 	return path+str;
 }
 document.addEventListener('deviceready', function(){
 	alert("ready");
-	window.analytics.startTrackerWithId('UA-72808177-1', success, fail);
-	alert("ready2");
+	gaPlugin = window.plugins.gaPlugin;
+    gaPlugin.init(success, fail, "UA-72808177-1", 10);
 }, false);
 function success(){
 	alert("ok");
