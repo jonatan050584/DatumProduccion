@@ -16,6 +16,9 @@
  * specific language governing permissions and limitations
  * under the License.
  */
+
+var gaPlugin;
+
 var app = {
     // Application Constructor
     initialize: function() {
@@ -34,6 +37,8 @@ var app = {
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
+        gaPlugin = window.plugins.gaPlugin;
+        gaPlugin.init(successHandler, errorHandler, "UA-72808177-1", 10);
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
@@ -47,3 +52,15 @@ var app = {
         console.log('Received Event: ' + id);
     }
 };
+function successHandler(){
+    alert("successHandler")
+}
+function errorHandler(){
+    alert("errorHandler")
+}
+function nativePluginResultHandler(){
+    alert("nativePluginResultHandler");
+}
+function nativePluginErrorHandler(){
+    alert("nativePluginErrorHandler");
+}

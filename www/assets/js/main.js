@@ -70,7 +70,7 @@ function getContent(obj,addEntry){
 
 
 	switch(seccion){
-
+		gaPlugin.trackPage( nativePluginResultHandler, nativePluginErrorHandler, "categoria");
 		case "categoria":
 			categoria.cargar(obj.keycat,obj.padre);
 			break;
@@ -107,6 +107,8 @@ function getContent(obj,addEntry){
 
 
 }
+
+
 
 var Datos = function(){
 	this.iniciar = function(){
