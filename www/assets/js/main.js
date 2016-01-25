@@ -28,9 +28,16 @@ document.addEventListener('deviceready', function(){
 }, false);
 function success(){
 	alert("ok");
+	gaPlugin.trackPage( nativePluginResultHandler, nativePluginErrorHandler, "home");
 }
 function fail(msg){
 	alert(msg);
+}
+function nativePluginResultHandler(){
+	alert("page");
+}
+function nativePluginErrorHandler(){
+	alert("error");
 }
 $(document).ready(function(){
 
