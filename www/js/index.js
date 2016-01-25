@@ -37,8 +37,8 @@ var app = {
     // function, we must explicitly call 'app.receivedEvent(...);'
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
-        gaPlugin = window.plugins.gaPlugin;
-        gaPlugin.init(nativePluginResultHandler, nativePluginErrorHandler, "UA-72808177-1", 10);
+
+       window.analytics.startTrackerWithId('UA-72808177-1');
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
@@ -52,13 +52,3 @@ var app = {
         console.log('Received Event: ' + id);
     }
 };
-
-function nativePluginResultHandler (result) {
-    //alert('nativePluginResultHandler - '+result);
-    console.log('nativePluginResultHandler: '+result);
-}
-
-function nativePluginErrorHandler (error) {
-    //alert('nativePluginErrorHandler - '+error);
-    console.log('nativePluginErrorHandler: '+error);
-}

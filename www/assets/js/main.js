@@ -138,7 +138,7 @@ var Seccion = function(){
 	this.dom = null;
 	this.url = "";
 	this.mostrar = function(){
-		gaPlugin.trackPage( nativePluginResultHandler, nativePluginErrorHandler, this.url);
+		window.analytics.trackView(this.url);
 		header.setTitulo(this.titulo);
 		this.dom.show();
 	}
