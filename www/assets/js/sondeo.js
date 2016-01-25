@@ -7,6 +7,7 @@ var Sondeo = function(){
 		this.pulso = data.pulso;
 		
 		header.setTitulo(categoria);
+		analytics(data.titulo);
 		$("#sondeo .titulo").html(data.titulo);
 		
 		$("#sondeo .btzoom").hide();

@@ -1,7 +1,7 @@
 var Categoria = function(){
 	this.dom = $("#categoria");
 	this.cargar = function(key,padre){
-		
+		analytics(this.data.nombre);
 		this.data = data[key];
 		$("#categoria .nombre").html(this.data.nombre);
 		$("#categoria .banner").css("background-image","url("+ruta("files/"+this.data.imagen)+")");

@@ -13,6 +13,7 @@ var Informe = function(){
 		$.each(pulsos,function(key,val){
 			if(val.id==pulsoId){
 				$("#informe .carga").html(val.fichatecnica);
+				analytics("Informe Técnico "+val.anio+"-"+val.mes);
 			}
 		})
 		

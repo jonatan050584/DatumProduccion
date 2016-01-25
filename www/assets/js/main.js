@@ -22,23 +22,18 @@ function ruta(str){
 	return path+str;
 }
 document.addEventListener('deviceready', function(){
-	alert("ready");
+	
 	gaPlugin = window.plugins.gaPlugin;
     gaPlugin.init(success, fail, "UA-72808177-1", 10);
 }, false);
 function success(){
-	alert("ok");
-	gaPlugin.trackPage( nativePluginResultHandler, nativePluginErrorHandler, "home");
+	
+	gaPlugin.trackPage( nativePluginResultHandler, nativePluginErrorHandler, "Home");
 }
 function fail(msg){
-	alert(msg);
+	console.log(msg);
 }
-function nativePluginResultHandler(){
-	alert("page");
-}
-function nativePluginErrorHandler(){
-	alert("error");
-}
+
 $(document).ready(function(){
 
 
@@ -122,6 +117,17 @@ function getContent(obj,addEntry){
 
 	window.scrollTo(0,0);
 
+	if(page=="menu"){
+		analytics("Menú Principal");
+	}
+	if(page=="contacto"){
+		analytics("Contacto");
+	}
+	if(page=="datum"){
+		analytics("Historia y Experiencia");
+	}
+	
+
 
 }
 
@@ -172,3 +178,12 @@ function compartir(titulo,image){
 	window.plugins.socialsharing.share("@DatumPeru #PulsoPerú "+tit, null, image, null);
 }
 
+function analytics(page){
+	gaPlugin.trackPage( nativePluginResultHandler, nativePluginErrorHandler, page);
+}
+function nativePluginResultHandler(){
+	//alert("page");
+}
+function nativePluginErrorHandler(){
+	//alert("error");
+}
