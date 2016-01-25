@@ -166,13 +166,16 @@ var BarSolo = function(val){
      }
 
      this.share = function(){
-
+        val.info=val.info+'<br><br><br><b>Datum Internacional</b><br><b>www.datum.com.pe</b>';
+        var lx = val.info.split("\r");
+        var count = lx.length+4;
        
         //console.log($("#chart").highcharts().getSVG());
         canvg(document.getElementById('canvas'), $("#chart").highcharts().getSVG({
             chart:{
                 width:960,
-                height:960
+                height:960,
+                spacingBottom:count*14
             },
             title:{
                 text: $("#sondeo .titulo").html()
@@ -181,9 +184,17 @@ var BarSolo = function(val){
                 text: $("#sondeo .subtitulo").html()
             },
             
-            credits:{
+             credits:{
+                style:{
+                    color:"#8C006C",
+                    fontSize:'11px',
+                    textAlign:'center'
+                },
                 enabled:true,
-                text:"www.datum.com.pe"
+                text:val.info,
+                position:{
+                    y: -1*count*13
+                }
             },
             legend:{
                 verticalAlign:"bottom",
@@ -191,7 +202,7 @@ var BarSolo = function(val){
                 
             },
         }));
-        //console.log(canvas.toDataURL());
+        console.log(canvas.toDataURL());
         //header.hideMenu();
         //canvg(document.getElementById('canvas'), graph.getSVG());
         compartir($("#sondeo .titulo").html(),canvas.toDataURL());

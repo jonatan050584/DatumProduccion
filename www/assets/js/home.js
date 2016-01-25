@@ -12,6 +12,7 @@ var Home = function(){
 			'touchend':function(){
 				getContent({page:"menu"},true);
 				$(this).removeClass("over");
+				window.analytics.trackView('Menu')
 			}
 			
 		});

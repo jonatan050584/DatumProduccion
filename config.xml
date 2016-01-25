@@ -51,7 +51,7 @@ Datum Perú, la empresa líder en investigación de mercado y estudios sociales 
     <gap:plugin name="org.apache.cordova.vibration" />
     <gap:plugin name="com.phonegap.plugin.statusbar" spec="1.1.0" source="pgb" />
     <gap:plugin name="cordova-plugin-x-socialsharing" source="npm" />
-    <gap:plugin name="com.danielcwilson.plugins.googleanalytics" spec="0.6.1" source="pgb" />
+    <gap:plugin name="com.analytics.google" spec="1.2.2" source="pgb" />
     <icon src="icon.png" />
     <icon gap:platform="android" gap:qualifier="ldpi" src="res/icon/android/icon-36-ldpi.png" />
     <icon gap:platform="android" gap:qualifier="mdpi" src="res/icon/android/icon-48-mdpi.png" />
@@ -88,4 +88,11 @@ Datum Perú, la empresa líder en investigación de mercado y estudios sociales 
         <allow-intent href="itms:*" />
         <allow-intent href="itms-apps:*" />
     </platform>
+
+    <feature name="UniversalAnalytics">
+      <param name="ios-package" value="UniversalAnalyticsPlugin" />
+    </feature>
+    <feature name="UniversalAnalytics">
+      <param name="android-package" value="com.danielcwilson.plugins.analytics.UniversalAnalyticsPlugin" />
+    </feature>
 </widget>

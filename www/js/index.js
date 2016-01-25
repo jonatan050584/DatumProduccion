@@ -38,7 +38,9 @@ var app = {
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
 
-       window.analytics.startTrackerWithId('UA-72808177-1');
+       alert("ready");
+
+       window.analytics.startTrackerWithId('UA-72808177-1', success, fail);
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
@@ -52,3 +54,9 @@ var app = {
         console.log('Received Event: ' + id);
     }
 };
+function success(){
+    alert("okga");
+}
+function fail(str){
+    alert(str);
+}

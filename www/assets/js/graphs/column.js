@@ -157,13 +157,16 @@ var Column = function(val){
      }
 
      this.share = function(){
-
+        val.info=val.info+'<br><br><br><b>Datum Internacional</b><br><b>www.datum.com.pe</b>';
+        var lx = val.info.split("\r");
+        var count = lx.length+4;
        
         //console.log($("#chart").highcharts().getSVG());
         canvg(document.getElementById('canvas'), $("#chart").highcharts().getSVG({
             chart:{
                 width:960,
-                height:960
+                height:500,
+                 spacingBottom:count*14
             },
             title:{
                 text: $("#sondeo .titulo").html()
@@ -175,17 +178,17 @@ var Column = function(val){
             credits:{
                 style:{
                     color:"#8C006C",
-                    fontSize:'14px',
+                    fontSize:'11px',
                     textAlign:'center'
                 },
                 enabled:true,
-                text:'Datum Internacional<br>www.datum.com.pe',
+                text:val.info,
                 position:{
-                    y: -30
+                    y: -1*count*13
                 }
             }
         }));
-        //console.log(canvas.toDataURL());
+        console.log(canvas.toDataURL());
         //header.hideMenu();
         //canvg(document.getElementById('canvas'), graph.getSVG());
         compartir($("#sondeo .titulo").html(),canvas.toDataURL());

@@ -15,7 +15,7 @@ var pulsos;
 
 var seccion = "home";
 
-var produccion=true;
+var produccion=false;
 
 
 function ruta(str){
@@ -138,7 +138,7 @@ var Seccion = function(){
 	this.dom = null;
 	this.url = "";
 	this.mostrar = function(){
-		window.analytics.trackView(this.url);
+		//window.analytics.trackView(this.url);
 		header.setTitulo(this.titulo);
 		this.dom.show();
 	}
