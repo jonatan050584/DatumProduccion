@@ -28,7 +28,7 @@ document.addEventListener('deviceready', function(){
 }, false);
 function success(){
 	
-	gaPlugin.trackPage( nativePluginResultHandler, nativePluginErrorHandler, "Home");
+	analytics("Home");
 }
 function fail(msg){
 	console.log(msg);
@@ -179,7 +179,7 @@ function compartir(titulo,image){
 }
 
 function analytics(page){
-	gaPlugin.trackPage( nativePluginResultHandler, nativePluginErrorHandler, page);
+	//gaPlugin.trackPage( nativePluginResultHandler, nativePluginErrorHandler, page);
 }
 function nativePluginResultHandler(){
 	//alert("page");
