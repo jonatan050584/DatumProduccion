@@ -21,7 +21,9 @@ var produccion=false;
 function ruta(str){
 	return path+str;
 }
-
+document.addEventListener('deviceready', function(){
+	alert("ready");
+}, false);
 
 $(document).ready(function(){
 
