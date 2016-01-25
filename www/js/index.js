@@ -38,7 +38,7 @@ var app = {
     onDeviceReady: function() {
         app.receivedEvent('deviceready');
         gaPlugin = window.plugins.gaPlugin;
-        gaPlugin.init(successHandler, errorHandler, "UA-72808177-1", 10);
+        gaPlugin.init(nativePluginResultHandler, nativePluginErrorHandler, "UA-72808177-1", 10);
     },
     // Update DOM on a Received Event
     receivedEvent: function(id) {
@@ -52,15 +52,13 @@ var app = {
         console.log('Received Event: ' + id);
     }
 };
-function successHandler(){
-    alert("successHandler")
+
+function nativePluginResultHandler (result) {
+    //alert('nativePluginResultHandler - '+result);
+    console.log('nativePluginResultHandler: '+result);
 }
-function errorHandler(){
-    alert("errorHandler")
-}
-function nativePluginResultHandler(){
-    alert("nativePluginResultHandler");
-}
-function nativePluginErrorHandler(){
-    alert("nativePluginErrorHandler");
+
+function nativePluginErrorHandler (error) {
+    //alert('nativePluginErrorHandler - '+error);
+    console.log('nativePluginErrorHandler: '+error);
 }

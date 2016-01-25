@@ -70,8 +70,9 @@ function getContent(obj,addEntry){
 
 
 	switch(seccion){
-		gaPlugin.trackPage( nativePluginResultHandler, nativePluginErrorHandler, "categoria");
+		
 		case "categoria":
+
 			categoria.cargar(obj.keycat,obj.padre);
 			break;
 		case "sondeo":
@@ -135,7 +136,9 @@ var Datos = function(){
 
 var Seccion = function(){
 	this.dom = null;
+	this.url = "";
 	this.mostrar = function(){
+		gaPlugin.trackPage( nativePluginResultHandler, nativePluginErrorHandler, this.url);
 		header.setTitulo(this.titulo);
 		this.dom.show();
 	}

@@ -1,4 +1,5 @@
 var Home = function(){
+	this.url = "home";
 	this.titulo = "RESUMEN";
 	this.dom = $("#home");
 

@@ -1,6 +1,6 @@
 var Menu = function(){
 	
-
+	this.url;
 	this.titulo = "DATUM - Pulso Perú";
 	this.dom = $("#menu");
 
