@@ -24,6 +24,7 @@ function ruta(str){
 document.addEventListener('deviceready', function(){
 	alert("ready");
 	window.analytics.startTrackerWithId('UA-72808177-1', success, fail);
+	alert("ready2");
 }, false);
 function success(){
 	alert("ok");
