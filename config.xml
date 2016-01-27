@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='utf-8'?>
-<widget id="pe.pulsoperudatum.app" version="1.0.3" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
+<widget id="pe.pulsoperudatum.app" version="1.0.4" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
     <name>Datum Perú</name>
     <description>
        ¿Cómo va la intención de voto 2016? ¿Cuál es la aprobación del Presidente del Perú? ¿Qué opina la gente de los temas más relevantes para el país?
