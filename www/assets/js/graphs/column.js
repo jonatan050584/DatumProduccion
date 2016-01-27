@@ -1,6 +1,12 @@
 var Column = function(val){
 
     this.data = val;
+
+    if(this.data.alto!=""){
+        $("#sondeo .grafico.column .area").css("height",this.data.alto);
+    }else{
+        $("#sondeo .grafico.column .area").css("height",400);
+    }
     
     this.colors = new Array();
 
@@ -164,8 +170,8 @@ var Column = function(val){
         //console.log($("#chart").highcharts().getSVG());
         canvg(document.getElementById('canvas'), $("#chart").highcharts().getSVG({
             chart:{
-                width:960,
-                height:500,
+                width:470,
+                height:470,
                  spacingBottom:count*14
             },
             title:{

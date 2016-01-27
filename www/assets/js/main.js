@@ -117,13 +117,13 @@ function getContent(obj,addEntry){
 
 	window.scrollTo(0,0);
 
-	if(page=="menu"){
+	if(seccion=="menu"){
 		analytics("Menú Principal");
 	}
-	if(page=="contacto"){
+	if(seccion=="contacto"){
 		analytics("Contacto");
 	}
-	if(page=="datum"){
+	if(seccion=="datum"){
 		analytics("Historia y Experiencia");
 	}
 	
@@ -179,7 +179,7 @@ function compartir(titulo,image){
 }
 
 function analytics(page){
-	gaPlugin.trackPage( nativePluginResultHandler, nativePluginErrorHandler, page);
+	//gaPlugin.trackPage( nativePluginResultHandler, nativePluginErrorHandler, page);
 }
 function nativePluginResultHandler(){
 	//alert("page");

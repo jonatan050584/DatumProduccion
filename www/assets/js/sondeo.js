@@ -1,10 +1,51 @@
+var sondeoKey;
+
 var Sondeo = function(){
 	this.dom = $("#sondeo");
 	this.pulso = null;
 
+	this.dom.on("swipeleft",function(e){
+		var sigsondeo = sondeoKey+1;
+		if(sigsondeo==listasondeos.length) sigsondeo=0;
+		$("#sondeo").animate({
+			"margin-left":-300,
+			"opacity":0
+		},function(){
+			getContent({page:"sondeo",tema:listasondeos[sigsondeo]},false);
+			$("#sondeo").css("margin-left",300);
+			$("#sondeo").animate({
+				"margin-left":0,
+				"opacity":1
+			});
+		})
+	});
+
+	this.dom.on("swiperight",function(e){
+		var antsondeo = sondeoKey-1;
+		if(antsondeo<0) antsondeo=listasondeos.length-1;
+		$("#sondeo").animate({
+			"margin-left":300,
+			"opacity":0
+		},function(){
+			getContent({page:"sondeo",tema:listasondeos[antsondeo]},false);
+			$("#sondeo").css("margin-left",-300);
+			$("#sondeo").animate({
+				"margin-left":0,
+				"opacity":1
+			});
+		})
+	})
+
 	this.cargar = function(data,categoria){
 
 		this.pulso = data.pulso;
+
+		
+		$.each(listasondeos,function(key,val){
+			if(data==val){
+				sondeoKey = key;
+			}
+		})
 		
 		header.setTitulo(categoria);
 		analytics(data.titulo);

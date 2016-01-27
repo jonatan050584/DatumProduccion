@@ -1,3 +1,6 @@
+var listasondeos = new Array();
+var idcat;
+
 var Categoria = function(){
 	this.dom = $("#categoria");
 	this.cargar = function(key,padre){
@@ -12,6 +15,12 @@ var Categoria = function(){
 		this.temas.limpiar();
 		this.temas.listar();
 
+		listasondeos = new Array();
+		$.each(this.data.temas,function(key,val){
+			if(val.hijos==false){
+				listasondeos.push(val);
+			}
+		});
 		window.scrollTo(0,0);
 	}
 }

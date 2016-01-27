@@ -1,3 +1,4 @@
+ var categorias = new Array();
 var BarSolo = function(val){
     
     console.log(val.data);
@@ -22,16 +23,12 @@ var BarSolo = function(val){
     this.colors = this.colors.concat(shuffle(colors));
 
 
-    if(this.data.alto!=""){
-        $("#sondeo .grafico.barsolo .area").css("height",this.data.alto);
-    }else{
-        $("#sondeo .grafico.barsolo .area").css("height",800);
-    }
+   
 
     this.cargar = function(){
        
         
-        var categorias = new Array();
+        categorias = new Array();
 
         var csv = $.csv.toArrays(val.data);
 
@@ -73,7 +70,11 @@ var BarSolo = function(val){
         console.log(categorias);
         console.log(seriesOptions);
 
-
+        if(this.data.alto!=""){
+            $("#sondeo .grafico.barsolo .area").css("height",this.data.alto);
+        }else{
+            $("#sondeo .grafico.barsolo .area").css("height",categorias.length*70);
+        }
         $('#chart').highcharts({
             chart: {
                 type: 'bar',
@@ -170,11 +171,16 @@ var BarSolo = function(val){
         var lx = val.info.split("\r");
         var count = lx.length+4;
        
+       if(this.data.alto!=""){
+            var _alto = this.data.alto;
+        }else{
+            var _alto = categorias.length*120;
+        }
         //console.log($("#chart").highcharts().getSVG());
         canvg(document.getElementById('canvas'), $("#chart").highcharts().getSVG({
             chart:{
-                width:960,
-                height:960,
+                width:640,
+                height:_alto,
                 spacingBottom:count*14
             },
             title:{
@@ -197,7 +203,8 @@ var BarSolo = function(val){
                 }
             },
             legend:{
-                verticalAlign:"bottom",
+                verticalAlign:"middle",
+                align:"right",
                 layout:"vertical"
                 
             },

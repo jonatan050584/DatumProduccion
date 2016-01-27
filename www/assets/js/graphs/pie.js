@@ -1,4 +1,3 @@
-
 var Pie = function(val){
     this.data = val;
 	
@@ -111,8 +110,8 @@ var Pie = function(val){
         //console.log($("#chart").highcharts().getSVG());
         canvg(document.getElementById('canvas'), $("#chart").highcharts().getSVG({
             chart:{
-                width:480,
-                height:480,
+                width:470,
+                height:470,
                 spacingBottom:count*14
             },
             title:{
@@ -124,7 +123,10 @@ var Pie = function(val){
                 text: $("#sondeo .subtitulo").html(),
                 useHTML:false
             },
-            
+            legend:{
+                verticalAlign:"middle",
+                align:"right"
+            },
              credits:{
                 style:{
                     color:"#8C006C",

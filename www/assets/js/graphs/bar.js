@@ -1,12 +1,10 @@
+var categorias = new Array();
+
 var Bar = function(val){
 
     this.data = val;
     
-    if(this.data.alto!=""){
-        $("#sondeo .grafico.bar .area").css("height",this.data.alto);
-    }else{
-        $("#sondeo .grafico.bar .area").css("height",800);
-    }
+    
 
     
     this.colors = shuffle(colors);
@@ -29,8 +27,8 @@ var Bar = function(val){
 
     this.cargar = function(){
        
+        categorias = new Array();
         
-        var categorias = new Array();
 
         var csv = $.csv.toArrays(val.data);
 
@@ -78,10 +76,14 @@ var Bar = function(val){
             seriesRev[i] = val;
 
         });
-        console.log("----");
-        console.log(seriesRev);
+        console.log("-c--");
+        console.log(this.data.alto);
 
-
+        if(this.data.alto!=""){
+            $("#sondeo .grafico.bar .area").css("height",this.data.alto);
+        }else{
+            $("#sondeo .grafico.bar .area").css("height",categorias.length*120);
+        }
     
 
         $('#chart').highcharts({
@@ -107,6 +109,7 @@ var Bar = function(val){
             },
             legend:{
                 verticalAlign:"top",
+                align:"center",
                 layout:"vertical",
                 reversed:true
                 
@@ -174,11 +177,20 @@ var Bar = function(val){
         var lx = val.info.split("\r");
         var count = lx.length+4;
         //console.log($("#chart").highcharts().getSVG());
+
+
+
+        if(this.data.alto!=""){
+            var _alto = this.data.alto;
+        }else{
+            var _alto = categorias.length*120;
+        }
+
         canvg(document.getElementById('canvas'), $("#chart").highcharts().getSVG({
             chart:{
-                width:960,
-                height:960,
-                 spacingBottom:count*14
+                width:640,
+                height:_alto,
+                spacingBottom:count*14
             },
             title:{
                 text: $("#sondeo .titulo").html()
@@ -200,7 +212,8 @@ var Bar = function(val){
                 }
             },
             legend:{
-                verticalAlign:"bottom",
+                verticalAlign:"middle",
+                align:"right",
                 layout:"vertical"
                 
             },

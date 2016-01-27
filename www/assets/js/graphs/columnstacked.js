@@ -2,8 +2,7 @@ var ColumnStacked = function(val){
 
     this.data = val;
     
-    
-
+   
     
     this.colors = shuffle(colors);
 
@@ -64,6 +63,7 @@ var ColumnStacked = function(val){
                 
             }
         });
+
         if(this.data.alto!=""){
             $("#sondeo .grafico.columnstacked .area").css("height",this.data.alto);
         }else{
@@ -175,11 +175,13 @@ var ColumnStacked = function(val){
        val.info=val.info+'<br><br><br><b>Datum Internacional</b><br><b>www.datum.com.pe</b>';
         var lx = val.info.split("\r");
         var count = lx.length+4;
+
+       
         //console.log($("#chart").highcharts().getSVG());
         canvg(document.getElementById('canvas'), $("#chart").highcharts().getSVG({
             chart:{
-                width:960,
-                height:960,
+                width:640,
+                height:this.data.alto,
                 spacingBottom:count*14
             },
             title:{
@@ -203,9 +205,10 @@ var ColumnStacked = function(val){
             },
             legend:{
                 verticalAlign:"bottom",
+                align:"center",
                 layout:"vertical"
                 
-            },
+            }
         }));
         console.log(canvas.toDataURL());
         //header.hideMenu();
