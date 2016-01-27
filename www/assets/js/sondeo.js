@@ -16,7 +16,7 @@ var Sondeo = function(){
 		    	console.log(valor);
 		        $(this).css('-webkit-transform',"translate(" + valor + "px, 0px)");
 		    },
-		    duration:500,complete:function(){
+		    duration:300,complete:function(){
 		    	getContent({page:"sondeo",tema:listasondeos[sigsondeo]},false);
 		    	
 		    	$("#sondeo").css("-webkit-transform","translate(0px,0px)");
@@ -42,7 +42,7 @@ var Sondeo = function(){
 		    	console.log(valor);
 		        $(this).css('-webkit-transform',"translate(" + valor + "px, 0px)");
 		    },
-		    duration:500,complete:function(){
+		    duration:300,complete:function(){
 		    	getContent({page:"sondeo",tema:listasondeos[antsondeo]},false);
 		    	
 		    	$("#sondeo").css("-webkit-transform","translate(0px,0px)");
