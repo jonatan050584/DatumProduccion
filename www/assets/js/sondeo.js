@@ -3,70 +3,65 @@ var sondeoKey;
 var Sondeo = function(){
 	this.dom = $("#sondeo");
 	this.pulso = null;
+	this.flagswipe = true;
 
 	this.dom.on("swipeleft",function(e){
-		var sigsondeo = sondeoKey+1;
-		if(sigsondeo==listasondeos.length) sigsondeo=0;
+		if(sondeo.flagswipe){
+			var sigsondeo = sondeoKey+1;
+			if(sigsondeo==listasondeos.length) sigsondeo=0;
 
-		//$('#sondeo').animate({"-webkit-transform":"translate(-300px,0px)"});
+			//$('#sondeo').animate({"-webkit-transform":"translate(-300px,0px)"});
 
-		$("#sondeo").animate({ "opacity":0,whyNotToUseANonExistingProperty: 300 }, {
-		    step: function(now,fx) {
-		    	var valor = now*-1;
-		    	console.log(valor);
-		        $(this).css('-webkit-transform',"translate(" + valor + "px, 0px)");
-		    },
-		    duration:300,complete:function(){
-		    	getContent({page:"sondeo",tema:listasondeos[sigsondeo]},false);
-		    	
-		    	$("#sondeo").css("-webkit-transform","translate(0px,0px)");
+			$("#sondeo").animate({ "opacity":0,whyNotToUseANonExistingProperty: 300 }, {
+			    step: function(now,fx) {
+			    	var valor = now*-1;
+			    	console.log(valor);
+			        $(this).css('-webkit-transform',"translate(" + valor + "px, 0px)");
+			    },
+			    duration:300,complete:function(){
+			    	getContent({page:"sondeo",tema:listasondeos[sigsondeo]},false);
+			    	
+			    	$("#sondeo").css("-webkit-transform","translate(0px,0px)");
 
-		    	$("#sondeo").animate({
-		    		"opacity":1,
-		    		whyNotToUseANonExistingProperty:0
-		    	});
+			    	$("#sondeo").animate({
+			    		"opacity":1,
+			    		whyNotToUseANonExistingProperty:0
+			    	});
 
-		    }
-		},'linear');
-
+			    }
+			},'linear');
+		}
 	});
 
 	this.dom.on("swiperight",function(e){
-		var antsondeo = sondeoKey-1;
-		if(antsondeo<0) antsondeo=listasondeos.length-1;
+		if(sondeo.flagswipe){
+
+			var antsondeo = sondeoKey-1;
+			if(antsondeo<0) antsondeo=listasondeos.length-1;
 
 
-		$("#sondeo").animate({ "opacity":0,whyNotToUseANonExistingProperty: 300 }, {
-		    step: function(now,fx) {
-		    	var valor = now;
-		    	console.log(valor);
-		        $(this).css('-webkit-transform',"translate(" + valor + "px, 0px)");
-		    },
-		    duration:300,complete:function(){
-		    	getContent({page:"sondeo",tema:listasondeos[antsondeo]},false);
-		    	
-		    	$("#sondeo").css("-webkit-transform","translate(0px,0px)");
+			$("#sondeo").animate({ "opacity":0,whyNotToUseANonExistingProperty: 300 }, {
+			    step: function(now,fx) {
+			    	var valor = now;
+			    	console.log(valor);
+			        $(this).css('-webkit-transform',"translate(" + valor + "px, 0px)");
+			    },
+			    duration:300,complete:function(){
+			    	getContent({page:"sondeo",tema:listasondeos[antsondeo]},false);
+			    	
+			    	$("#sondeo").css("-webkit-transform","translate(0px,0px)");
 
-		    	$("#sondeo").animate({
-		    		"opacity":1,
-		    		whyNotToUseANonExistingProperty:0
-		    	});
+			    	$("#sondeo").animate({
+			    		"opacity":1,
+			    		whyNotToUseANonExistingProperty:0
+			    	});
 
-		    }
-		},'linear');
+			    }
+			},'linear');
 
+		}
 
-
-		/*$("#sondeo").animate({
-			"opacity":0
-		},200,function(){
-			getContent({page:"sondeo",tema:listasondeos[antsondeo]},false);
-			$("#sondeo").css("margin-left",-300);
-			$("#sondeo").animate({
-				"margin-left":0,
-				"opacity":1
-			});
-		})*/
+		
 	})
 
 	this.cargar = function(data,categoria){

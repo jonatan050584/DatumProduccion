@@ -46,9 +46,11 @@ var Line = function(val){
                 
                 
                 if($(this).html()=="Expandir"){
+                    sondeo.flagswipe = false;
                     line.zoomIn();
                     $(this).html("Reducir");
                 }else{
+                    sondeo.flagswipe = true;
                     line.zoomOut();
                     $(this).html("Expandir");
                 }
@@ -67,10 +69,11 @@ var Line = function(val){
                 $(this).removeClass("over");
                 
                 if($(this).html()=="Expandir"){
-
+                    sondeo.flagswipe = false;
                     line.zoomIn();
                     $(this).html("Reducir");
                 }else{
+                    sondeo.flagswipe = true;
                     line.zoomOut();
                     $(this).html("Expandir");
                 }
