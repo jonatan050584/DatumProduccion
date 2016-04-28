@@ -322,12 +322,21 @@ html {
 	text-align: center;
 	margin-bottom: 15px;
 }
+#sondeo .subtitulo img{
+	display: none;
+}
 #sondeo .info{
 	font-family: 'HelveticaNeueLight';
 	font-size: 13px;
 	color: #545454;
 	line-height: 19px;
 }
+#sondeo .info.share{
+	color: #9e027e;
+	font-family: 'HelveticaNeueMedium';
+	text-align: right;
+}
+
 #sondeo .info strong{
 	font-weight: normal;
 	font-family: 'HelveticaNeueBold';
@@ -362,7 +371,14 @@ html {
 #sondeo .leyenda .item.hide .color{
 	opacity: 0.3;
 }
-
+#sondeo .creditos{
+	color: #9e027e;
+	font-family: 'HelveticaNeueMedium';
+	font-size: 13px;
+	line-height: 19px;
+	text-align: right;
+	display: none;
+}
 #sondeo canvas{
 	width: 960px;
 	height: 960px;
@@ -486,18 +502,19 @@ html {
 #resumen ol{
 	margin: 0px;
 	padding: 20px;
-	color: #9e027e;
-	font-family: 'HelveticaNeueBold';
+	
+	font-family: 'HelveticaNeueLight';
 }
 #resumen ol li{
-	font-family: 'HelveticaNeueBold';
+	font-family: 'HelveticaNeueLight';
 	font-size: 14px;
 	line-height: 18px;
+	color: #545454;
 }
 #resumen ol li strong{
-	font-family: 'HelveticaNeueBold';
+	font-family: 'HelveticaNeuemedium';
 	font-weight: normal;
-	color: #545454;
+	color: #9e027e;
 }
 #resumen ol li span{
 	font-family: 'HelveticaNeueLight';

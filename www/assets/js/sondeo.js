@@ -157,6 +157,12 @@ var Grafico = function(data){
 				graph.cargar();
 			},1000);
 			break;
+		case "imagen":
+			setTimeout(function(){
+				graph = new Imagen(data);
+				graph.cargar();
+			},1000);
+			break;
 	}
 
 }

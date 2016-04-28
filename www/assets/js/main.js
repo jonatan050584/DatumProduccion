@@ -179,7 +179,7 @@ function compartir(titulo,image){
 }
 
 function analytics(page){
-	gaPlugin.trackPage( nativePluginResultHandler, nativePluginErrorHandler, page);
+	if(produccion)	gaPlugin.trackPage( nativePluginResultHandler, nativePluginErrorHandler, page);
 }
 function nativePluginResultHandler(){
 	//alert("page");
