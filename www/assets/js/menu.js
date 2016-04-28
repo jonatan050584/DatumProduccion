@@ -25,7 +25,7 @@ var Menu = function(){
 			"touchend":function(){
 				$(this).removeClass("over");
 
-
+				
 
 				if($(this).hasClass("contacto")) getContent({page:"contacto"},true);
 				else if($(this).hasClass("datum")) getContent({page:"datum"},true);
@@ -36,8 +36,15 @@ var Menu = function(){
 				$(this).addClass("over");
 			},
 			"touchend":function(){
+				
+				var pid;
+				$.each(pulsos,function(k,v){
+					if(v.principal=="1"){
+						pid = v.id;
+					}
+				})
 				$(this).removeClass("over");
-				getContent({page:"resumen",pulso:pulsos[0].id},true);
+				getContent({page:"resumen",pulso:pid},true);
 				
 			}
 		});
@@ -58,9 +65,14 @@ var Menu = function(){
 				$(this).addClass("over");
 			},
 			"mouseup":function(){
+				var pid;
+				$.each(pulsos,function(k,v){
+					if(v.principal=="1"){
+						pid = v.id;
+					}
+				})
 				$(this).removeClass("over");
-				
-				getContent({page:"resumen",pulso:pulsos[0].id},true);
+				getContent({page:"resumen",pulso:pid},true);
 				
 			}
 		})
