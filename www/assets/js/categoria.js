@@ -4,8 +4,8 @@ var idcat;
 var Categoria = function(){
 	this.dom = $("#categoria");
 	this.cargar = function(key,padre){
-		
-		alert(key);
+
+		/*alert(key);
 		alert(padre);
 		this.data = data[key];
 		alert(this.data);
@@ -26,7 +26,7 @@ var Categoria = function(){
 				listasondeos.push(val);
 			}
 		});
-		window.scrollTo(0,0);
+		window.scrollTo(0,0);*/
 	}
 }
 Categoria.prototype = new Seccion();
