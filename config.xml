@@ -36,7 +36,7 @@ Datum Perú, la empresa líder en investigación de mercado y estudios sociales 
 
     <gap:plugin name="cordova-plugin-splashscreen" source="npm" />
 
-    <gap:plugin name="com.phonegap.plugin.statusbar" spec="1.1.0" source="pgb" />
+    <gap:plugin name="cordova-plugin-statusbar" source="npm" />
     <gap:plugin name="cordova-plugin-x-socialsharing" source="npm" />
     <gap:plugin name="com.adobe.plugins.gaplugin" />
     <icon src="icon.png" />
