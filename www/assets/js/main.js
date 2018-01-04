@@ -129,7 +129,7 @@ function getContent(obj,addEntry){
 
 	if(seccion=="menu"){
 		alert("secmenu");
-		analytics("Menú Principal");
+		//analytics("Menú Principal");
 	}
 	if(seccion=="contacto"){
 		analytics("Contacto");

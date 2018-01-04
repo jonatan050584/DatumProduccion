@@ -11,7 +11,7 @@ var Categoria = function(){
 		alert(this.data);
 		alert(JSON.stringify(this.data));
 		alert(this.data.nombre);
-		analytics(this.data.nombre);
+		//analytics(this.data.nombre);
 		$("#categoria .nombre").html(this.data.nombre);
 		$("#categoria .banner").css("background-image","url("+ruta("files/"+this.data.imagen)+")");
 		$("#categoria .banner .area").css("background-image","url("+ruta("files/o"+this.data.icono)+")");
