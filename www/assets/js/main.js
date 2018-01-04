@@ -76,12 +76,12 @@ function getContent(obj,addEntry){
 	
 	
 	var antseccion = seccion;
-
+	alert(antseccion);
 	
 
 	seccion=obj.page;
 
-
+	alert(seccion);
 	switch(seccion){
 		
 		case "categoria":
