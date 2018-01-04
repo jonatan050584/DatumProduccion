@@ -49,12 +49,12 @@ $(document).ready(function(){
 
 
 function analytics(page){
-	if(produccion){
-		alert(4);
+	//if(produccion){
+		alert("analytics "+page);
 		//gaPlugin.trackPage( nativePluginResultHandler, nativePluginErrorHandler, page);
 		//window.ga.trackView(page);
 		//alert(5);
-	}
+	//}
 }
 function iniciar(){
 	header = new Header();
@@ -128,6 +128,7 @@ function getContent(obj,addEntry){
 	window.scrollTo(0,0);
 
 	if(seccion=="menu"){
+		alert("secmenu");
 		analytics("Menú Principal");
 	}
 	if(seccion=="contacto"){
@@ -186,7 +187,7 @@ function compartir(titulo,image){
 	if(ind!=-1) tit = titulo.substr(0,ind);
 	else tit = titulo;
 
-	window.plugins.socialsharing.share("@DatumPeru #PulsoPerú "+tit, null, image, null);
+	//window.plugins.socialsharing.share("@DatumPeru #PulsoPerú "+tit, null, image, null);
 }
 
 
