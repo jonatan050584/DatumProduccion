@@ -5,7 +5,7 @@ var Categoria = function(){
 	this.dom = $("#categoria");
 	this.cargar = function(key,padre){
 
-		/*alert(key);
+		alert(key);
 		alert(padre);
 		this.data = data[key];
 		alert(this.data);
@@ -13,8 +13,8 @@ var Categoria = function(){
 		alert(this.data.nombre);
 		analytics(this.data.nombre);
 		$("#categoria .nombre").html(this.data.nombre);
-		//$("#categoria .banner").css("background-image","url("+ruta("files/"+this.data.imagen)+")");
-		//$("#categoria .banner .area").css("background-image","url("+ruta("files/o"+this.data.icono)+")");
+		$("#categoria .banner").css("background-image","url("+ruta("files/"+this.data.imagen)+")");
+		$("#categoria .banner .area").css("background-image","url("+ruta("files/o"+this.data.icono)+")");
 		header.setTitulo(this.data.nombre);
 		this.temas = new Temas(key,padre);
 		this.temas.limpiar();
@@ -26,7 +26,7 @@ var Categoria = function(){
 				listasondeos.push(val);
 			}
 		});
-		window.scrollTo(0,0);*/
+		//window.scrollTo(0,0);
 	}
 }
 Categoria.prototype = new Seccion();
