@@ -15,11 +15,15 @@ var Categoria = function(){
 		$("#categoria .nombre").html(this.data.nombre);
 		$("#categoria .banner").css("background-image","url("+ruta("files/"+this.data.imagen)+")");
 		$("#categoria .banner .area").css("background-image","url("+ruta("files/o"+this.data.icono)+")");
+		alert(5);
 		header.setTitulo(this.data.nombre);
+		alert(6);
 		this.temas = new Temas(key,padre);
+		alert(7);
 		this.temas.limpiar();
+		alert(8);
 		this.temas.listar();
-
+		alert(9);
 		listasondeos = new Array();
 		/*$.each(this.data.temas,function(key,val){
 			if(val.hijos==false){
