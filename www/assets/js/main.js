@@ -15,22 +15,24 @@ var pulsos;
 
 var seccion = "home";
 
-var produccion=true;
+var produccion=false;
 var gaPlugin;
 
 function ruta(str){
 	return path+str;
 }
 document.addEventListener('deviceready', function(){
+	alert(1);
 	window.ga.startTrackerWithId('UA-72808177-1', 10,success,fail); 
 	//gaPlugin = window.plugins.gaPlugin;
     //gaPlugin.init(success, fail, "UA-72808177-1", 10);
 }, false);
 function success(){
-	
+	alert(2);
 	analytics("Home");
 }
 function fail(msg){
+	alert(3);
 	console.log(msg);
 }
 
