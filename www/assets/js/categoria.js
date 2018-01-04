@@ -9,6 +9,7 @@ var Categoria = function(){
 		this.data = data[key];
 		alert(this.data);
 		alert(JSON.stringify(this.data));
+		alert(this.data.nombre);
 		analytics(this.data.nombre);
 		$("#categoria .nombre").html(this.data.nombre);
 		//$("#categoria .banner").css("background-image","url("+ruta("files/"+this.data.imagen)+")");
@@ -35,7 +36,7 @@ Categoria.prototype = new Seccion();
 var Temas = function(keycat,padre){
 	this.data = data[keycat].temas;
 
-	
+
 
 	this.listar = function(){
 		$.each(this.data,function(key,val){
