@@ -22,17 +22,15 @@ function ruta(str){
 	return path+str;
 }
 document.addEventListener('deviceready', function(){
-	//alert(1);
-	//window.ga.startTrackerWithId('UA-72808177-1', 10,success,fail); 
+	window.ga.startTrackerWithId('UA-72808177-1', 10,sucess,fail); 
 	//gaPlugin = window.plugins.gaPlugin;
     //gaPlugin.init(success, fail, "UA-72808177-1", 10);
 }, false);
 function success(){
-	//alert(2);
-	analytics("Home");
+	
+	//analytics("Home");
 }
 function fail(msg){
-	//alert(3);
 	console.log(msg);
 }
 
@@ -48,14 +46,7 @@ $(document).ready(function(){
 
 
 
-function analytics(page){
-	//if(produccion){
-		alert("analytics "+page);
-		//gaPlugin.trackPage( nativePluginResultHandler, nativePluginErrorHandler, page);
-		//window.ga.trackView(page);
-		//alert(5);
-	//}
-}
+
 function iniciar(){
 	header = new Header();
 	home = new Home();
@@ -83,12 +74,12 @@ function getContent(obj,addEntry){
 	
 	
 	var antseccion = seccion;
-	alert(antseccion);
+
 	
 
 	seccion=obj.page;
 
-	alert(seccion);
+
 	switch(seccion){
 		
 		case "categoria":
@@ -115,8 +106,7 @@ function getContent(obj,addEntry){
 	if(seccion=="home") header.hideBack();
 	else header.showBack();
 
-	alert("ocultar"+antseccion);
-	alert("mostrar"+seccion);
+	
 
 	window[antseccion].ocultar();
 	window[seccion].mostrar();
@@ -128,14 +118,13 @@ function getContent(obj,addEntry){
 	window.scrollTo(0,0);
 
 	if(seccion=="menu"){
-		alert("secmenu");
 		//analytics("Menú Principal");
 	}
 	if(seccion=="contacto"){
-		analytics("Contacto");
+		//analytics("Contacto");
 	}
 	if(seccion=="datum"){
-		analytics("Historia y Experiencia");
+		//analytics("Historia y Experiencia");
 	}
 	
 
@@ -190,7 +179,12 @@ function compartir(titulo,image){
 	//window.plugins.socialsharing.share("@DatumPeru #PulsoPerú "+tit, null, image, null);
 }
 
-
+/*function analytics(page){
+	if(produccion){
+		//gaPlugin.trackPage( nativePluginResultHandler, nativePluginErrorHandler, page);
+		window.ga.trackView(page);
+	}
+}*/
 function nativePluginResultHandler(){
 	//alert("page");
 }

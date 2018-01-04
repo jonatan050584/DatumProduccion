@@ -4,33 +4,24 @@ var idcat;
 var Categoria = function(){
 	this.dom = $("#categoria");
 	this.cargar = function(key,padre){
-
-		alert(key);
-		alert(padre);
+		
 		this.data = data[key];
-		alert(this.data);
-		alert(JSON.stringify(this.data));
-		alert(this.data.nombre);
 		//analytics(this.data.nombre);
 		$("#categoria .nombre").html(this.data.nombre);
 		$("#categoria .banner").css("background-image","url("+ruta("files/"+this.data.imagen)+")");
 		$("#categoria .banner .area").css("background-image","url("+ruta("files/o"+this.data.icono)+")");
-		alert(5);
 		header.setTitulo(this.data.nombre);
-		alert(6);
 		this.temas = new Temas(key,padre);
-		alert(7);
 		this.temas.limpiar();
-		alert(8);
 		this.temas.listar();
-		alert(9);
+
 		listasondeos = new Array();
-		/*$.each(this.data.temas,function(key,val){
+		$.each(this.data.temas,function(key,val){
 			if(val.hijos==false){
 				listasondeos.push(val);
 			}
-		});*/
-		//window.scrollTo(0,0);
+		});
+		window.scrollTo(0,0);
 	}
 }
 Categoria.prototype = new Seccion();
@@ -40,8 +31,6 @@ Categoria.prototype = new Seccion();
 
 var Temas = function(keycat,padre){
 	this.data = data[keycat].temas;
-
-
 
 	this.listar = function(){
 		$.each(this.data,function(key,val){

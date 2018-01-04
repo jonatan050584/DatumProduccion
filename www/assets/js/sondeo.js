@@ -76,7 +76,7 @@ var Sondeo = function(){
 		})
 		
 		header.setTitulo(categoria);
-		analytics(data.titulo);
+		//analytics(data.titulo);
 		$("#sondeo .titulo").html(data.titulo);
 		
 		$("#sondeo .btzoom").hide();

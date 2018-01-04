@@ -15,7 +15,7 @@ var Resumen = function(){
 			if(val.id==pulsoId){
 				$("#resumen .carga").html(val.resumenficha);
 			
-				analytics("Resumen de Ficha Técnica "+val.anio+"-"+val.mes);
+				//analytics("Resumen de Ficha Técnica "+val.anio+"-"+val.mes);
 	
 			}
 		});
