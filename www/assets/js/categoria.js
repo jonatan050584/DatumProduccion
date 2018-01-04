@@ -6,7 +6,7 @@ var Categoria = function(){
 	this.cargar = function(key,padre){
 		
 		this.data = data[key];
-		//analytics(this.data.nombre);
+		ptrackanalytics(this.data.nombre);
 		$("#categoria .nombre").html(this.data.nombre);
 		$("#categoria .banner").css("background-image","url("+ruta("files/"+this.data.imagen)+")");
 		$("#categoria .banner .area").css("background-image","url("+ruta("files/o"+this.data.icono)+")");
