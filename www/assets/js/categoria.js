@@ -21,11 +21,11 @@ var Categoria = function(){
 		this.temas.listar();
 
 		listasondeos = new Array();
-		$.each(this.data.temas,function(key,val){
+		/*$.each(this.data.temas,function(key,val){
 			if(val.hijos==false){
 				listasondeos.push(val);
 			}
-		});
+		});*/
 		//window.scrollTo(0,0);
 	}
 }
