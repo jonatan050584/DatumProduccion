@@ -4,6 +4,7 @@ var idcat;
 var Categoria = function(){
 	this.dom = $("#categoria");
 	this.cargar = function(key,padre){
+		
 		alert(key);
 		alert(padre);
 		this.data = data[key];

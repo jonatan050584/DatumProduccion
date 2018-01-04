@@ -108,7 +108,8 @@ function getContent(obj,addEntry){
 	if(seccion=="home") header.hideBack();
 	else header.showBack();
 
-	
+	alert("ocultar"+antseccion);
+	alert("mostrar"+seccion);
 
 	window[antseccion].ocultar();
 	window[seccion].mostrar();
