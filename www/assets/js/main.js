@@ -176,7 +176,7 @@ function compartir(titulo,image){
 	if(ind!=-1) tit = titulo.substr(0,ind);
 	else tit = titulo;
 
-	//window.plugins.socialsharing.share("@DatumPeru #PulsoPerú "+tit, null, image, null);
+	window.plugins.socialsharing.share("@DatumPeru #PulsoPerú "+tit, null, image, null);
 }
 
 function ptrackanalytics(page){

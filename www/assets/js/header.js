@@ -113,7 +113,7 @@ var Header = function(dom){
 							archivo = val.archivo;
 						}
 					})
-					window.open("http://181.177.230.181/datum/descarga/"+archivo, '_system');
+					window.open("http://admin.datum.com.pe/datum/descarga/"+archivo, '_system');
 				}
 			}
 		});
@@ -138,7 +138,7 @@ var Header = function(dom){
 							archivo = val.archivo;
 						}
 					})
-					window.open("http://181.177.230.181/datum/descarga/"+archivo, '_system');
+					window.open("http://admin.datum.com.pe/datum/descarga/"+archivo, '_system');
 				}
 				
 			}
