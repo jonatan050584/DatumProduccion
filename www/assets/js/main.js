@@ -184,7 +184,7 @@ function compartir(titulo,image){
 
 function analytics(page){
 	if(produccion){
-		//alert(4);
+		alert(4);
 		//gaPlugin.trackPage( nativePluginResultHandler, nativePluginErrorHandler, page);
 		//window.ga.trackView(page);
 		//alert(5);
