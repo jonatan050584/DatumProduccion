@@ -22,9 +22,9 @@ function ruta(str){
 	return path+str;
 }
 document.addEventListener('deviceready', function(){
-	
-	gaPlugin = window.plugins.gaPlugin;
-    gaPlugin.init(success, fail, "UA-72808177-1", 10);
+	window.ga.startTrackerWithId('UA-72808177-1', 10,sucess,fail); 
+	//gaPlugin = window.plugins.gaPlugin;
+    //gaPlugin.init(success, fail, "UA-72808177-1", 10);
 }, false);
 function success(){
 	
@@ -138,7 +138,8 @@ var Datos = function(){
 		$.ajax({
 			//crossDomain: true,
 			//url:"assets/data3.json",
-			url:"http://181.177.230.181/datum/json.php",
+			//url:"http://181.177.230.181/datum/json.php",
+			url:"http://admin.datum.com.pe/datum/json.php",
 			//url:"http://localhost/datum/app/DatumTerminado/www/assets/json.php",
 			dataType:'jsonp',
 			jsonp: 'jsoncallback',
@@ -179,7 +180,10 @@ function compartir(titulo,image){
 }
 
 function analytics(page){
-	if(produccion)	gaPlugin.trackPage( nativePluginResultHandler, nativePluginErrorHandler, page);
+	if(produccion){
+		//gaPlugin.trackPage( nativePluginResultHandler, nativePluginErrorHandler, page);
+		window.ga.trackView(page);
+	}
 }
 function nativePluginResultHandler(){
 	//alert("page");
