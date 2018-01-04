@@ -22,7 +22,7 @@ function ruta(str){
 	return path+str;
 }
 document.addEventListener('deviceready', function(){
-	window.ga.startTrackerWithId('UA-72808177-1', 10,sucess,fail); 
+	window.ga.startTrackerWithId('UA-72808177-1', 10,success,fail); 
 	//gaPlugin = window.plugins.gaPlugin;
     //gaPlugin.init(success, fail, "UA-72808177-1", 10);
 }, false);
@@ -182,7 +182,7 @@ function compartir(titulo,image){
 function analytics(page){
 	if(produccion){
 		//gaPlugin.trackPage( nativePluginResultHandler, nativePluginErrorHandler, page);
-		//window.ga.trackView(page);
+		window.ga.trackView(page);
 	}
 }
 function nativePluginResultHandler(){
