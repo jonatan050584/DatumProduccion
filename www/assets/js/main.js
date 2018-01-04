@@ -48,7 +48,14 @@ $(document).ready(function(){
 
 
 
-
+function analytics(page){
+	if(produccion){
+		alert(4);
+		//gaPlugin.trackPage( nativePluginResultHandler, nativePluginErrorHandler, page);
+		//window.ga.trackView(page);
+		//alert(5);
+	}
+}
 function iniciar(){
 	header = new Header();
 	home = new Home();
@@ -182,14 +189,7 @@ function compartir(titulo,image){
 	window.plugins.socialsharing.share("@DatumPeru #PulsoPerú "+tit, null, image, null);
 }
 
-function analytics(page){
-	if(produccion){
-		alert(4);
-		//gaPlugin.trackPage( nativePluginResultHandler, nativePluginErrorHandler, page);
-		//window.ga.trackView(page);
-		//alert(5);
-	}
-}
+
 function nativePluginResultHandler(){
 	//alert("page");
 }
