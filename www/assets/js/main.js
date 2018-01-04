@@ -15,7 +15,7 @@ var pulsos;
 
 var seccion = "home";
 
-var produccion=false;
+var produccion=true;
 var gaPlugin;
 
 function ruta(str){
@@ -183,8 +183,10 @@ function compartir(titulo,image){
 
 function analytics(page){
 	if(produccion){
+		alert(4);
 		//gaPlugin.trackPage( nativePluginResultHandler, nativePluginErrorHandler, page);
 		window.ga.trackView(page);
+		alert(5);
 	}
 }
 function nativePluginResultHandler(){
