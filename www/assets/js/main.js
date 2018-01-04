@@ -15,7 +15,7 @@ var pulsos;
 
 var seccion = "home";
 
-var produccion=true;
+var produccion=false;
 var gaPlugin;
 
 function ruta(str){
